@@ -1,0 +1,1 @@
+<a {{ $attributes->merge(['class' => ' NHaasGroteskDSPro-65Md text-base text-gray-800 dark:text-gray-200 leading-tight text-left sm:text-right px-6 transition duration-150 ease-in-out']) }}>{{ $slot }}</a>

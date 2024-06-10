@@ -1,0 +1,503 @@
+/* Add the necessary styles for the sticky header */
+@font-face {
+    font-family: 'orpheusproMedium'; /* Choose a custom name for your font */
+    src: url('/appfiles/fonts/orpheuspro-medium.otf') format('opentype');
+    /* Add more font formats if you have them */
+  }
+
+  @font-face {
+    font-family: 'DINAlternateBold'; /* Choose a custom name for your font */
+    src: url('/appfiles/fonts/DINAlternate-Bold.ttf') format('truetype');
+    /* Add more font formats if you have them */
+  }
+
+
+  @font-face {
+    font-family: 'HalyardDisplay'; /* Choose a custom name for your font */
+    src: url('/appfiles/fonts/HalyardDisplay.ttf') format('truetype');
+    /* Add more font formats if you have them */
+  }
+
+
+  @font-face {
+    font-family: 'NHaasGroteskDSPro-65Md'; /* Choose a custom name for your font */
+    src: url('/appfiles/fonts/NHaasGroteskDSPro-65Md.ttf') format('truetype');
+    /* Add more font formats if you have them */
+  }
+
+
+  @font-face {
+    font-family: 'BaskervilleBT'; /* Choose a custom name for your font */
+    src: url('/appfiles/fonts/BaskervilleBT.ttf') format('truetype');
+    /* Add more font formats if you have them */
+  }
+
+
+  @font-face {
+    font-family: 'MinionPro-Regular'; /* Choose a custom name for your font */
+    src: url('/appfiles/fonts/MinionPro-Regular.otf') format('opentype');
+    /* Add more font formats if you have them */
+  }
+
+
+  @font-face {
+    font-family: 'NHaasGroteskTXPro-75Bd'; /* Choose a custom name for your font */
+    src: url('/appfiles/fonts/NHaasGroteskTXPro-75Bd.ttf') format('truetype');
+    /* Add more font formats if you have them */
+  }
+
+
+
+
+
+  .orpheusproMedium{
+    font-family: 'orpheusproMedium', sans-serif !important;
+  }
+
+  .DINAlternateBold{
+    font-family: 'DINAlternateBold', sans-serif !important;
+  }
+
+  .HalyardDisplay{
+    font-family: 'HalyardDisplay', sans-serif !important;
+  }
+  
+  .NHaasGroteskDSPro-65Md{
+    font-family: 'NHaasGroteskDSPro-65Md', sans-serif !important;
+  }
+
+
+  .BaskervilleBT{
+    font-family: 'BaskervilleBT', sans-serif !important;
+  }
+
+
+  .MinionPro-Regular{
+    font-family: 'MinionPro-Regular', sans-serif !important;
+  }
+
+
+  .NHaasGroteskTXPro-75Bd{
+    font-family: 'NHaasGroteskTXPro-75Bd', sans-serif !important;
+  }
+
+  
+.color-orange{
+    color: #FF5D02 !important;
+}
+
+.bg-SelectColor{
+    background-color: #f7f4ed !important;
+}
+
+.bg-SelectRed{
+    background-color: #FF0000 !important;
+}
+
+
+.bg-SelectGreen{
+    background-color: #31A264 !important;
+}
+
+
+.bg-SelectOrange{
+    background-color: #FF5D02 !important;
+}
+
+.bg-brown{
+    background-color: #2d1610 !important; 
+}
+
+.colorGreen{
+    color: #31A264 !important;
+}
+
+.colorOrange{
+    color: #FF5D02 !important;
+}
+
+.sticky-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: top 0.3s ease-in-out;
+    z-index: 100 !important;
+}
+
+.sticky-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6%;
+    animation: fadeInDown 0.3s ease-in-out;
+}
+
+.hover-border:hover{
+    border-color: white !important;
+}
+
+.SingleStoryslider:hover {
+  opacity: 1 !important;
+}
+
+.SingleStoryslider img {
+  border-radius: 5px;
+}
+
+/* Define a fade-in animation for smoother transition */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.tabH{
+    height: 50px !important;
+}
+
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.storiesBoxmain{
+    width: 580px ;
+    height: 500px ;
+}
+
+.storiesBox {
+    width: 380px ;
+    height: 300px ;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.VidText-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bgtexover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.black-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    pointer-events: none; /* Allow interactions with the iframe through the overlay */
+}
+
+.non-interactable-iframe-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+    overflow: hidden;
+}
+
+
+
+.non-interactable-iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    transform: translateX(-50%);
+    pointer-events: none; /* Disable interactions with the iframe */
+}
+
+
+
+
+
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    .non-interactable-iframe-container {
+        height: 100%;
+    }
+
+    .video-container {
+        height: 26vh !important;
+    }
+
+    .video-title {
+        font-size: 1.2rem !important; /* Reduced font size for small screens */
+    }
+
+    .about-title{
+        font-size: 3.0rem !important; /* Reduced font size for small screens */
+    }
+
+    .article-title {
+        font-size: 2.0rem !important; /* Reduced font size for small screens */
+    }
+
+    .dadaclubTitle{
+        font-size: 3rem !important; 
+    }
+
+    .footerDadaTitle {
+        font-size: 2rem !important;
+    }
+
+}
+
+
+.text-4body {
+    font-size: 1.5rem !important;
+    line-height: 150% !important;
+    font-weight: 500 !important;
+    font-family: 'BaskervilleBT' !important;
+}
+
+.text-4body p {
+  font-family: 'BaskervilleBT' !important;
+}
+
+
+
+
+/* Media query for small screens */
+@media screen and (max-width: 912px) {
+    .non-interactable-iframe-container {
+        height: 100%;
+    }
+
+    .video-container {
+        height: 36vh;
+    }
+
+}
+
+  .parallax {
+    /* Set a specific height */
+    min-height: 100vh !important;
+    height: 100vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+
+  .parallax2 {
+    /* Set a specific height */
+    min-height: 100vh !important;
+    height: 100vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    .gallerSec:hover .galleryOverlay {
+        opacity: 0;
+    }
+
+
+
+    .masonry-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px; /* Adjust the gap between images */
+        padding: 16px;
+    }
+    
+    .imager {
+        flex: 1;
+        min-width: calc(33.333% - 16px); /* Adjust the width based on the number of columns you want */
+    }
+    
+    .imager img {
+        width: 100%;
+        display: block;
+        border-radius: 8px;
+    }
+
+    .carousel-slide{
+        display: flex !important;
+    }
+
+
+    /* Define the keyframes for the specified wobble animation */
+@keyframes wobble {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    75% { transform: translateX(-5px); }
+    87.5% { transform: translateX(5px); }
+  }
+  
+  /* Apply the animation to the wobble-text class */
+  .wobble-text {
+    font-weight: 900;
+    animation: wobble 4s infinite linear;
+    display: inline-block;
+  }
+  
+
+  .fade , .slide-in{
+    opacity: 0;
+  }
+
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 0.8s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+
+
+    .anm_mod {
+     opacity: 0;
+     transform: translate3d(0, 100%, 0);
+     transition: all 1s ease;
+     width: 100%;
+     font-size: 2rem;
+     border-color: white;
+     &.full {
+      width: 100%;
+      font-size: 3rem;
+     }
+     &.left {
+      transform: translate3d(-100%, 0, 0);
+     }
+     &.right {
+      transform: translate3d(100%, 0, 0);
+     }
+     &.delay {
+      transition: all 2s ease;
+     }
+     &.fast {
+      transition: all 0.8 ease;
+     }
+    }
+   
+   .animation .anm_mod.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+   }
+
+
+    .wrap {
+        position: relative;
+    }
+
+ 
+
+
+
+    #header {
+        color: white;
+        position: fixed;
+        top: 0; /* Start with it in the middle */
+        z-index: 100;
+        transition: 0.3s;
+        width: 97%;
+        left: 0;
+        margin: 10px;
+        padding-left: 5.5vw;
+        padding-right: 5.5vw;
+        padding-top: 7px;
+      }
+      
+      @media (max-width: 768px) {
+        #header {/* Set font size to 30px on small screens */
+          left: 0; /* Move to the left on smaller screens */
+          text-align: left;
+          width: 97vw; /* Let it take the natural width of the content */
+          transform: none;
+          margin-right: 6px;
+          margin-left: 6px; /* Remove horizontal centering */
+          margin-top: 20px;
+          padding-top: 0px;
+        }
+      }
+      
+
+  .heading {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+ /* Make the parent div fill the viewport height */
+  }
+
+  .custom-cursor {
+    width: 20px; /* Adjust the size of the cursor as needed */
+    height: 20px;
+    border: 2px solid black; /* Black border */
+    border-radius: 50%; /* Makes it circular */
+    position: fixed;
+    pointer-events: none; /* Prevents cursor from interfering with elements */
+    transform: translate(-50%, -50%); /* Center the cursor on the mouse pointer */
+    /*transition: all 0.1s ease; /* Add transition for a smooth effect */
+    z-index: 9999; /* Ensure the cursor is on top of other elements */
+}
+
+
+
+@media (min-width: 1024px) {
+  .lgwidth {/* Set font size to 30px on small screens */
+    width: 36rem !important;
+  }
+}
+
+
+
+  
